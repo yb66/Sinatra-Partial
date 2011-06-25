@@ -8,8 +8,21 @@ Because I was forever copying the code I took from http://www.sinatrarb.com/faq.
 
 So here it is, partials, and that's it.
 
+Installation
+============
+
+    gem install sinatra-partial
+
 Some examples
 =============
+
+At the top of your app.rb:
+
+    require 'sinatra/partial'
+
+    class Blah < Sinatra::Base
+      helpers Sinatra::Partial
+  
 
 Inside a route:
 
