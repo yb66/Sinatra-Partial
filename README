@@ -1,0 +1,44 @@
+You may say "why is this needed?".
+
+Go on then.
+
+_huff_ "Why is this needed?"
+
+Because I was forever copying the code I took from http://www.sinatrarb.com/faq.html#partials into each and every project. It may well be that this is included in some other gem full of useful helpers, but I haven't found it yet, and besides _this is what I really want_. The whole point of Sinatra is not to get a lot of stuff you didn't really need anyway.
+
+So here it is, partials, and that's it.
+
+Some examples
+=============
+
+Inside a route:
+
+    get "/" do
+      output = ''
+      post_links = some_array_full_of_links
+      output << partial( :main, :locals => { :output => partial( :post_links, :locals => { title: "Posts", posts: post_links } ) }  )
+      haml :content, :locals => { :output => output, title: "posts" }
+    end
+
+    
+Here's one inside a view:
+
+    - address = "ip#{ip.first.gsub(".", "_")}"
+    - v = ip.last
+    %div{class: "ip", id: "#{address}", ip: "#{ip.first}" }
+      %a{name: "#{address}"}
+      %h3= "#{ip.first}"
+      %p= "last visit: #{v[:last_visit]} No. of visits: #{v[:visits]}"
+      = partial( :geo, :locals => { geo: v[:geo] } )
+      
+      %a{href: "##{address}", class: "records", ip: "#{ip.first}"}
+        Show/hide records
+      %div{class: "records", ip: "#{ip.first}"}
+        <h4>Records:</h4>
+        = partial( :record, collection: v[:records] )
+
+Yes, a tad confusing, but I can't be bothered to cook up a simple example - just look at the _partials_ and how they're used. Concentration brings insight (so it's said!)
+
+Thanks to Chris Schneider and Sam Elliott for sharing their code, I just made it into this gem.
+
+MIT Licence (i.e. be good!)

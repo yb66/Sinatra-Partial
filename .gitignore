@@ -1,0 +1,11 @@
+.DS_Store
+.rvmrc
+*.tmproj
+key
+log/
+files/
+thin/
+.sass-cache/
+run/
+app/.sass-cache/
+
