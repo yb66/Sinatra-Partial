@@ -1,3 +1,7 @@
+Quick note: If you do decide to use this gem, please let me know if it isn't working for you - make a contribution!
+
+Back to our previously scheduled programming...
+
 You may say "why is this needed?".
 
 Go on then.
@@ -51,6 +55,14 @@ Here's one inside a view:
         = partial( :record, collection: v[:records] )
 
 Yes, a tad confusing, but I can't be bothered to cook up a simple example - just look at the _partials_ and how they're used. Concentration brings insight (so it's said!)
+
+Another quick note: Since the locals hash was getting clobbered when using a collection, I've changed the code so that you can pass in a collection _and_ locals that will be accessible too.
+
+    = partial( :record, collection: v[:records], :locals => {something_else: 243} )
+    
+Now you'll be able to access the local `something_else` within the :record partial.
+
+You can also decide to do some clobbering of your own and HULK SMASH! the defaults for the collection, which in this case would be :record (as it's the template name) and :layout => false. Perhaps you might need this so I've left it up to you, but probably best to leave it alone and call your locals something else. It's your code.
 
 Thanks to Chris Schneider and Sam Elliott for sharing their code, I just made it into this gem.
 

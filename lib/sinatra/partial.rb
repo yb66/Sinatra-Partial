@@ -14,9 +14,9 @@ module Sinatra
 
       if collection = opts.delete(:collection)
         collection.inject([]) do |buffer, member|
-          buffer << haml(template, opts.merge(
-            :layout => false, 
-            :locals => {template.to_sym => member}
+          buffer << haml( template, 
+                          opts.merge(:layout => false, 
+                          :locals => {template.to_sym => member}.merge(opts[:locals])
             )
           )
         end.join("\n")
