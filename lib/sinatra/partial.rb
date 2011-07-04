@@ -13,10 +13,9 @@ module Sinatra
       opts.merge!(:layout => false) # don't layout, this is a partial
 
       if collection = opts.delete(:collection)
+        locals = opts[:locals].nil? ? {} : opts.delete(:locals)
         collection.inject([]) do |buffer, member|
-          buffer << haml( template, 
-                          opts.merge(:layout => false, 
-                          :locals => {template.to_sym => member}.merge(opts[:locals])
+          buffer << haml( template, opts.merge(:layout => false, :locals => {template.to_sym => member}.merge(locals)
             )
           )
         end.join("\n")
