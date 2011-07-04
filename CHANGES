@@ -1,0 +1,1 @@
+v0.1.0 The locals hash doesn't get clobbered if passing a collection now, but you do get the chance to clobber the default of passing the collection local if you so wish. With great power comes great responsibility!
