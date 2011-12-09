@@ -8,4 +8,4 @@ thin/
 .sass-cache/
 run/
 app/.sass-cache/
-
+*.gem
