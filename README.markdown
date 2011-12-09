@@ -60,7 +60,7 @@ At the top of your app.rb:
 
     get "/" do
       output = ""
-      title = "My contrived example"
+      @title = "My contrived example"
       username = current_user.username
       output << partial( :left_col )
       output << partial( :middle, :locals => { username: username} )
