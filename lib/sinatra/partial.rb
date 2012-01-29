@@ -8,6 +8,7 @@ module Sinatra
     # support for partials
     # @example
     #   partial( :meta, :locals => {meta: meta} )
+    #   partial( :things, :collection: my_array )
     def partial(template, *args)
       opts = args.last.is_a?(Hash) ? args.pop : {} # get hash options if they're there
       opts.merge!(:layout => false) # don't layout, this is a partial
