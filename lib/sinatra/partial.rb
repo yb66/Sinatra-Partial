@@ -17,6 +17,7 @@ module Sinatra
       if collection = opts.delete(:collection)
         locals = opts[:locals].nil? ? {} : opts.delete(:locals)
         collection.inject([]) do |buffer, member|
+          puts "member: #{member}"
           buffer << haml( template, opts.merge(:layout => false, :locals => {template.to_sym => member}.merge(locals)
             )
           )
