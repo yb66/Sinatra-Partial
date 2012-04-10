@@ -32,11 +32,11 @@ The default templating engine is haml. If you wish to use something else, you ca
 
 If you wish, you can also pass this in with the options hash to partial (if you do, it will override the above setting for that call):
 
-    partial(:"meta/news", :template_engine => :erb
+    partial(:"meta/news", :template_engine => :erb)
 
 If you like the Rails convention of adding an underscore to the beginning of a partial, set it here:
 
-    set :partial_underscores, true
+    enable :partial_underscores
 
 Otherwise, the default is for no underscore (if you like Rails you know where to get it;)
 
