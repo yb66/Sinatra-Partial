@@ -1,0 +1,14 @@
+<html>
+  <head></head>
+  <body>
+    <%= partial :meta %>
+    
+    <ul>
+      <%= partial :news, :collection => News %>
+    </ul>
+      
+    <%= partial( :locality, :locals => Hash[%w{a b c d}.zip(%w{A B C D})]) %>
+    
+    <%= yield %>
+  </body>
+</html>
