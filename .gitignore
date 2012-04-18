@@ -9,3 +9,9 @@ thin/
 run/
 app/.sass-cache/
 *.gem
+.bundle/
+Gemfile.lock
+vendor/
+.yardoc/
+bin/
+docs/
