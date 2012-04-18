@@ -4,6 +4,7 @@ group :development do
   gem "rake"
   gem "wirble"
   gem "reek"
+  gem "maruku"
   gem "yard"
   gem "travis-lint"
 end
@@ -15,6 +16,6 @@ group :test do
   gem "simplecov"
   gem "sinatra"
   gem "haml"
-  gem "redcarpet"
+  gem "maruku"
   gem 'timecop'
 end
