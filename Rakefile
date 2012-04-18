@@ -2,7 +2,7 @@
 
 require 'rake'
 
-task :default => "docs"
+task :default => "spec"
 
 desc "(Re-) generate documentation and place it in the docs/ dir. Open the index.html file in there to read it."
 task :docs => :"docs:yard"  
