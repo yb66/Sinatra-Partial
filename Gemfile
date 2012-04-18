@@ -5,6 +5,7 @@ group :development do
   gem "wirble"
   gem "reek"
   gem "yard"
+  gem "travis-lint"
 end
 
 group :test do
