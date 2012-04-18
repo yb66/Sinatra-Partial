@@ -205,7 +205,9 @@ To contribute some code:
 * Write some documentation using Yard comments - see http://rubydoc.info/docs/yard/file/docs/GettingStarted.md
   - Use real English (i.e. full stops and commas, no l33t or LOLZ). I'll accept American English even though it's ugly. Don't be surprised if I 'correct' it.
   - Code without comments won't get in, I don't have the time to work out what you've done if you're not prepared to spend some time telling me (and everyone else).
+* Run `reek PATH_TO_FILE_WITH_YOUR_CHANGES` and see if it gives you any good advice. You don't have to do what it says, just consider it.
 * Run specs to make sure you've not broken anything. If it doesn't pass all the specs it doesn't get in.
+  - Have a look at coverage/index.htm and see if all your code was checked. We're trying for 100% code coverage.
 * Run `bin/rake docs` to generate documentation.
     - Open up docs/index.html and check your documentation has been added and is clear.
 * Add a short summary of your changes to the CHANGES file. Add your name and a link to your bio/website if you like too.
