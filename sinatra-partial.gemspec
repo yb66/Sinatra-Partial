@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Chris Schneider", "Sam Elliott", "Iain Barnett"]
   s.email       = ["iainspeed@gmail.com"]
   s.homepage    = "https://github.com/yb66/Sinatra-Partial"
-  s.summary     = %q{Rack middleware for Geo IP city lookup}
+  s.summary     = %q{A sinatra extension for render partials.}
   s.description = %q{Just the partials helper in a gem. That is all.}
   s.license     = 'MIT'
 

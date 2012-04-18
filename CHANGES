@@ -1,3 +1,5 @@
+v0.2.1 Sam Elliott provided a lot of helpful code to add in features that were lost from his gist. Further to these, the lib is now a Sinatra Extension so it can add in some useful defaults. Different template engines other than Haml may be specified, and leading underscores (a la Rails) can be specified for partials too. Examples have been added to the examples directory, and the code docs are much more extensive.
+
 v0.1.1 Improved the examples in the Readme file. A lot.
 
 v0.1.0 The locals hash doesn't get clobbered if passing a collection now, but you do get the chance to clobber the default of passing the collection local if you so wish. With great power comes great responsibility!

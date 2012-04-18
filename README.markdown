@@ -24,15 +24,42 @@ So here it is, partials, and that's it.
 
     gem install sinatra-partial
 
-### Some examples ###
+### Configuration options ###
+
+The default templating engine is haml. If you wish to use something else, you can set in the config options:
+
+    set :partial_template_engine, :erb
+
+If you wish, you can also pass this in with the options hash to partial (if you do, it will override the above setting for that call):
+
+    partial(:"meta/news", :template_engine => :erb)
+
+If you like the Rails convention of adding an underscore to the beginning of a partial, set it here:
+
+    enable :partial_underscores
+
+Otherwise, the default is for no underscore (if you like Rails you know where to get it;)
+
+### Getting started ###
 
 At the top of your app.rb:
 
     require 'sinatra/partial'
 
+For a classic app, that's all you need to do. For a modular app you should register it too:
+
     class Blah < Sinatra::Base
-      helpers Sinatra::Partial
-  
+      register Sinatra::Partial
+
+
+### Some examples ###
+
+The docs are good to look at (big thanks to Sam Elliot for improving them a lot), just follow the docs link from this page if you can't find them:
+
+https://rubygems.org/gems/sinatra-partial
+
+or use yard/rdoc to generate them.
+
 
 #### Inside a route ####
 
@@ -144,29 +171,21 @@ Here's how to use a collection, in this case to render a menu:
       
     
 You'll get a menu built for you.
-      
 
 
-### Another quick note ###
+### Examples ###
 
- Since the locals hash was getting clobbered when using a collection, I've changed the code so that you can pass in a collection _and_ locals that will be accessible too.
+Look in the examples directory for some very simple examples.
 
-    = partial( :record, collection: v[:records], :locals => {something_else: 243} )
-    
-Now you'll be able to access the local `something_else` within the `:record` partial.
-
-### HULK SMASH!!! ###
-
-You can also decide to do some clobbering of your own and HULK SMASH! the defaults for the collection, which in this case would be :record (as it's the template name) and :layout => false. Perhaps you might need this so I've left it up to you, but probably best to leave it alone and call your locals something else. It's your code.
 
 ### Thanks ###
 
-Thanks to Chris Schneider and Sam Elliott for sharing their code, I just made it into this gem and tinkered ever so slightly.
+Thanks to Chris Schneider and Sam Elliott for sharing their code, and for sharing further updates.
 
 
 ### Licence ###
 
-Copyright (c) 2011 Iain Barnett
+Copyright (c) 2012 Iain Barnett
 
 MIT Licence
 
