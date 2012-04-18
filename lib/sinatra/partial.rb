@@ -4,6 +4,20 @@ require 'sinatra/base'
 
 module Sinatra
   module Partial
+    
+    # This is here to make testing the private code easier while not including it in the helpers.
+    module Private
+      
+      # This gets the path to the template, taking into account whether leading underscores are needed.      
+      # @private
+      def self.partial_expand_path(partial_path, underscores=false)
+        dirs, base = [File.dirname(partial_path),File.basename(partial_path)]
+        base.insert(0, "_") if underscores
+        File.join(dirs, base).to_sym
+      end
+    end
+    
+    
     module Helpers
       # Renders a partial to a string.
       # 
@@ -35,7 +49,7 @@ module Sinatra
         engine = options.fetch(:template_engine, settings.partial_template_engine)
         underscores = options.fetch(:underscores, settings.partial_underscores)
         
-        template = partial_expand_path(partial_location, underscores)
+        template = Private.partial_expand_path(partial_location, underscores)
         
         if collection = options.delete(:collection)
           member_local = partial_local(partial_location)
