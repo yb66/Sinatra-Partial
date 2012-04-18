@@ -7,6 +7,10 @@ Spec_dir = File.expand_path( File.dirname __FILE__ )
 require 'simplecov'
 SimpleCov.start
 
+require "rack/test"
+ENV['RACK_ENV'] ||= 'test'
+ENV["EXPECT_WITH"] ||= "racktest"
+
 require "logger"
 logger = Logger.new STDOUT
 logger.level = Logger::DEBUG
