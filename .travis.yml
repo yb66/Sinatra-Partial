@@ -10,3 +10,4 @@ rvm:
   - ruby-head
   - jruby-head
   - ree
+bundler_args: --binstubs --path vendor 
