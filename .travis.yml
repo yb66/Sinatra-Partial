@@ -11,3 +11,4 @@ rvm:
   - jruby-head
   - ree
 bundler_args: --binstubs --path vendor 
+script: bin/rake spec
