@@ -15,6 +15,6 @@ group :test do
   gem "simplecov"
   gem "sinatra"
   gem "haml"
-  gem "rdiscount"
+  gem "redcarpet"
   gem 'timecop'
 end
