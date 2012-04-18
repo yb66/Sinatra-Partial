@@ -5,7 +5,9 @@ Spec_dir = File.expand_path( File.dirname __FILE__ )
 
 # code coverage
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter "/vendor/"
+end
 
 require "rack/test"
 ENV['RACK_ENV'] ||= 'test'
