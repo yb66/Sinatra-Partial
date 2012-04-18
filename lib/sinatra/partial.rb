@@ -52,7 +52,7 @@ module Sinatra
         template = Private.partial_expand_path(partial_location, underscores)
         
         if collection = options.delete(:collection)
-          member_local = partial_local(partial_location)
+          member_local = File.basename(partial_location).to_sym
   
           collection.inject([]) do |buffer, member|
             new_locals = {member_local => member}.merge(locals)
@@ -63,18 +63,7 @@ module Sinatra
         end
       end
       
-      private
-      
-      def partial_expand_path(partial_path, underscores=false)
-        dirs, base = [File.dirname(partial_path),File.basename(partial_path)]
-        base.insert(0, "_") if underscores
-        File.join(dirs, base).to_sym
-      end
-      
-      def partial_local(partial_path)
-        File.basename(partial_path).to_sym
-      end
-    end
+    end # of Helpers
     
     def self.registered(app)
       app.helpers(Partial::Helpers)
