@@ -65,6 +65,8 @@ module Sinatra
       
     end # of Helpers
     
+    # This is here to allow configuration options to be set.
+    # @private
     def self.registered(app)
       app.helpers(Partial::Helpers)
       
