@@ -198,6 +198,7 @@ To contribute some code:
     - `git checkout -b kitchen_sink`
 * Install Bundler.
     - `gem install bundler -r --no-ri --no-rdoc`
+    - Any further updates needed, just run `bundle install`, it'll remember the rest.
 * Install gems from Gemfile.
     - `bundle install --binstubs --path vendor`
 * Write some specs.
