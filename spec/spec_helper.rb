@@ -22,3 +22,13 @@ Dir[ File.join( Spec_dir, "/support/**/*.rb")].each do |f|
   puts "requiring #{f}"
   require f
 end
+
+
+RSpec.configure do |config|
+  config.treat_symbols_as_metadata_keys_with_true_values = true
+  config.include Rack::Test::Methods
+end
+
+# freeze time!
+require 'timecop'
+Timecop.freeze( Date.today  )
