@@ -16,6 +16,5 @@ group :test do
   gem "simplecov"
   gem "sinatra"
   gem "haml"
-  gem "maruku"
   gem 'timecop'
 end
