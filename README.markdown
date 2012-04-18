@@ -1,3 +1,5 @@
+[![Build Status for development branch](https://secure.travis-ci.org/yb66/Sinatra-Partial.png?branch=develop)](http://travis-ci.org/yb66/Sinatra-Partial)
+
 ## Sinatra Partial ##
 
 Partials for Sinatra!
