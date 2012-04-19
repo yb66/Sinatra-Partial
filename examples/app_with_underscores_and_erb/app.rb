@@ -1,6 +1,7 @@
-require 'sinatra'
-require_relative "../../lib/sinatra/partial.rb"
+require 'sinatra/base'
 require 'erb'
+require File.expand_path( File.join File.dirname(__FILE__), "../ext/kernel.rb")
+require_relative "../../lib/sinatra/partial.rb"
 require_relative "../whitespace_remove.rb"
 
 class AppWithUnderscoresAndErb < Sinatra::Base
