@@ -10,7 +10,7 @@ require_relative "../examples/app_with_underscores_and_erb/app.rb"
 require_relative "../examples/app_with_underscores_and_erb_and_subdirs/app.rb"
 
 shared_examples_for "all in examples dir" do
-  let(:expected) { "<html><head></head><body><p>Time is #{Time.now}</p><ul><li>This</li><li>is</li><li>all</li><li>new</li></ul><p>A is A</p><p>B is B</p><p>C is C</p><p>D is D</p><p>Hello, World</p></body></html>" }
+  let(:expected) { "<html><head></head><body><p>Time is 2012-04-20 00:00:00 +0100</p><ul><li class='klassic'>This</li><li class='klassic'>is</li><li class='klassic'>all</li><li class='klassic'>new</li></ul><p>A is A</p><p>B is B</p><p>C is C</p><p>D is D</p><p>Hello, World</p></body></html>" }
   subject { browser.last_response }
   it { should be_ok }
   it { subject.body.should == expected }
