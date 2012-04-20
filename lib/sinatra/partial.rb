@@ -21,7 +21,7 @@ module Sinatra
     module Helpers
       # Renders a partial to a string.
       # 
-      # @param [#to_s] partial The partial to render.
+      # @param [#to_s] partial_name The partial to render.
       # @param [Hash] options The options to render the partial with.
       # @option options [Hash] :locals Local variables to render with
       # @option options [Array] :collection Renders the template once per object in this array.
@@ -42,8 +42,8 @@ module Sinatra
       #   partial(:"meta/news", :collection => [<News>])
       #     # => renders views/meta/_news.haml once per item in :collection,
       #           with the local variable `news` being the current item in the iteration
-      def partial(partial, options={})
-        partial_location = partial.to_s
+      def partial(partial_name, options={})
+        partial_location = partial_name.to_s
         
         locals = options.fetch(:locals, {})
         engine = options.fetch(:template_engine, settings.partial_template_engine)
