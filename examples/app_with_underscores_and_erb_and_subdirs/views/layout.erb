@@ -4,7 +4,7 @@
     <%= partial :"partials/meta" %>
     
     <ul>
-      <%= partial :"partials/news", :collection => News %>
+      <%= partial :"partials/news", :collection => News, :locals => {klass: {class: "klassic"}} %>
     </ul>
       
     <%= partial( :"partials/locality", :locals => Hash[%w{a b c d}.zip(%w{A B C D})]) %>
