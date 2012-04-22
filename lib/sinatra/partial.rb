@@ -55,8 +55,6 @@ module Sinatra
       #           with the local variable `news` being the current item in the iteration
       def partial(partial_name, options={})
         partial_location = partial_name.to_s
-        
-        locals = options.fetch(:locals, {})
         engine = options.fetch(:template_engine, settings.partial_template_engine)
         underscores = options.fetch(:underscores, settings.partial_underscores)
         
@@ -64,6 +62,8 @@ module Sinatra
         
         if collection = options.delete(:collection)
           member_local = Private.partial_local(partial_location)
+        
+          locals = options.fetch(:locals, {})
   
           collection.inject([]) do |buffer, member|
             new_locals = {member_local => member}.merge(locals)
