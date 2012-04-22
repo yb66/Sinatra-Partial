@@ -13,6 +13,7 @@ module Sinatra
       # param [String] partial_path
       # param [true,false,nil] underscores Defaults to false
       def self.partial_expand_path(partial_path, underscores=false)
+        underscores ||= false
         dirs, base = [File.dirname(partial_path),File.basename(partial_path)]
         base.insert(0, "_") if underscores
         File.join(dirs, base).to_sym
