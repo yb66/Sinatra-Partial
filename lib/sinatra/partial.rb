@@ -19,6 +19,9 @@ module Sinatra
         File.join(dirs, base).to_sym
       end
       
+      # This takes the name of the local from the template's name, and corrects local by removing leading underscore if it's there.
+      # @private
+      # param [String] partial_path
       def self.partial_local(partial_path)
         partial_path = partial_path[1..-1] if partial_path.start_with? "_"
         File.basename(partial_path).to_sym
