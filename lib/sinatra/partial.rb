@@ -15,6 +15,11 @@ module Sinatra
         base.insert(0, "_") if underscores
         File.join(dirs, base).to_sym
       end
+      
+      def self.partial_local(partial_path)
+        partial_path = partial_path[1..-1] if partial_path.start_with? "_"
+        File.basename(partial_path).to_sym
+      end
     end
     
     
@@ -52,7 +57,7 @@ module Sinatra
         template = Private.partial_expand_path(partial_location, underscores)
         
         if collection = options.delete(:collection)
-          member_local = File.basename(partial_location).to_sym
+          member_local = Private.partial_local(partial_location)
   
           collection.inject([]) do |buffer, member|
             new_locals = {member_local => member}.merge(locals)
