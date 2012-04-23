@@ -1,10 +1,12 @@
+[![Build Status for development branch](https://secure.travis-ci.org/yb66/Sinatra-Partial.png?branch=develop)](http://travis-ci.org/yb66/Sinatra-Partial)
+
 ## Sinatra Partial ##
 
 Partials for Sinatra!
 
 ### Quick note ###
 
-If you do decide to use this gem, please let me know if it isn't working for you - make a contribution! Github makes it so simple..!
+If you do decide to use this gem, please let me know if it isn't working for you - make a contribution! Github makes it so simple..! See the Contribution section for more.
 
 Back to our previously scheduled programming...
 
@@ -181,6 +183,43 @@ Look in the examples directory for some very simple examples.
 ### Thanks ###
 
 Thanks to Chris Schneider and Sam Elliott for sharing their code, and for sharing further updates.
+
+### Contributing ###
+
+Most of all, remember that **any** contribution you can make will be valuable, whether that is putting in a ticket for a feature request (or a bug, but they don't happen here;), cleaning up some grammar, writing some documentation (or even a blog post, let me know!) or a full blooded piece of code - it's **all** welcome and encouraged.
+
+To contribute some code:
+
+1. Fork this.
+* `git clone git@github.com:YOUR_USERNAME/Sinatra-Partial.git`
+* `git remote add upstream git://github.com/yb66/Sinatra-Partial.git`
+* `git fetch upstream`
+* `git checkout develop`
+* Decide on the feature you wish to add.
+    - Give it a snazzy name, such as kitchen_sink.
+    - `git checkout -b kitchen_sink`
+* Install Bundler.
+    - `gem install bundler -r --no-ri --no-rdoc`
+    - Any further updates needed, just run `bundle install`, it'll remember the rest.
+* Install gems from Gemfile.
+    - `bundle install --binstubs --path vendor`
+* Write some specs.
+* Write some code. (Yes, I believe that is the correct order, and you'll never find me doing any different;)
+* Write some documentation using Yard comments - see http://rubydoc.info/docs/yard/file/docs/GettingStarted.md
+  - Use real English (i.e. full stops and commas, no l33t or LOLZ). I'll accept American English even though it's ugly. Don't be surprised if I 'correct' it.
+  - Code without comments won't get in, I don't have the time to work out what you've done if you're not prepared to spend some time telling me (and everyone else).
+* Run `reek PATH_TO_FILE_WITH_YOUR_CHANGES` and see if it gives you any good advice. You don't have to do what it says, just consider it.
+* Run specs to make sure you've not broken anything. If it doesn't pass all the specs it doesn't get in.
+  - Have a look at coverage/index.htm and see if all your code was checked. We're trying for 100% code coverage.
+* Run `bin/rake docs` to generate documentation.
+    - Open up docs/index.html and check your documentation has been added and is clear.
+* Add a short summary of your changes to the CHANGES file. Add your name and a link to your bio/website if you like too.
+* Send me a pull request.
+    - Don't merge into the develop branch!
+    - Don't merge into the master branch!
+    - see http://nvie.com/posts/a-successful-git-branching-model/ for more on how this is supposed to work.
+* Wait for worldwide fame.
+* Shrug and get on with you life when it doesn't arrive, but know you helped quite a few people in their life, even in a small way - 1000 raindrops will fill a bucket!
 
 
 ### Licence ###
