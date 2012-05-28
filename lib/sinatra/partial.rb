@@ -54,6 +54,7 @@ module Sinatra
       #     # => renders views/meta/_news.haml once per item in :collection,
       #           with the local variable `news` being the current item in the iteration
       def partial(partial_name, options={})
+        options.merge! :layout => false
         partial_location = partial_name.to_s
         engine = options.fetch(:template_engine, settings.partial_template_engine)
         underscores = options.fetch(:underscores, settings.partial_underscores)
