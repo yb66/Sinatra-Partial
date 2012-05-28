@@ -1,3 +1,10 @@
+## v0.3.1 ##
+
+28th of May 2012
+
+* Fixed a bug where partials called within a route would not have layout set to false by default. To be honest, I think it's a change in the Sinatra codebase, but it was easily fixed by setting layout to false with the partial method. This does, however, mean that partial can't be called to run a layout, but if you're using it that way then you're using it wrong! Try just calling `haml` or `erb`.
+* Improved the examples by adding a config.rb and config.ru. Not only does it mean the examples can be run from the command line easier, but I think it's a good way to set up an app to help with testing.
+
 ## v0.3.0 ##
 
 23rd of April 2012 
