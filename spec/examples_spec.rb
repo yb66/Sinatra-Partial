@@ -4,13 +4,13 @@ require "spec_helper"
 
 require_relative "../lib/sinatra/partial.rb"
 
-require_relative "../examples/app_no_underscores/app.rb"
-require_relative "../examples/app_with_underscores/app.rb"
-require_relative "../examples/app_with_underscores_and_erb/app.rb"
-require_relative "../examples/app_with_underscores_and_erb_and_subdirs/app.rb"
+require_relative "../examples/app_no_underscores/config.rb"
+require_relative "../examples/app_with_underscores/config.rb"
+require_relative "../examples/app_with_underscores_and_erb/config.rb"
+require_relative "../examples/app_with_underscores_and_erb_and_subdirs/config.rb"
 
 shared_examples_for "all in examples dir" do
-  let(:expected) { "<html><head></head><body><p>Time is #{Time.now}</p><ul><li class='klassic'>This</li><li class='klassic'>is</li><li class='klassic'>all</li><li class='klassic'>new</li></ul><p>A is A</p><p>B is B</p><p>C is C</p><p>D is D</p><p>Hello, World</p></body></html>" }
+  let(:expected) { "<html><head></head><body><p>Time is #{Time.now}</p><ul><li class='klassic'>This</li><li class='klassic'>is</li><li class='klassic'>all</li><li class='klassic'>new</li></ul><p>A is A</p><p>B is B</p><p>C is C</p><p>D is D</p><p>Hello, World</p><p>Show me magic!</p></body></html>" }
   subject { browser.last_response }
   it { should be_ok }
   it { subject.body.should == expected }
@@ -24,7 +24,7 @@ Apps = [AppNoUnderscores, AppWithUnderscores, AppWithUnderscoresAndErb, AppWithU
 
 Apps.each do |app|
   describe app.to_s do
-    let(:browser){  new_session( app ) }
+    let(:browser){  new_session( app.app ) }
     before{ browser.get '/' }
     it_should_behave_like "all in examples dir"
   end
