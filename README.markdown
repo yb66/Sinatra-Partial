@@ -114,10 +114,10 @@ Remember that since this is a helper method it can be called inside routes and v
       Welcome back #{username}
       
     -# content.haml
-      Blah Blah Blah
+    Blah Blah Blah
       
     -# footer.haml
-      You've reached the bottom of the page!
+    You've reached the bottom of the page!
     
     -# layout.haml
     %html
