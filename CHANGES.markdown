@@ -1,9 +1,19 @@
+7th of June 2012
+
+* Fixes to README.
+
+----
+
+
 ## v0.3.1 ##
 
 28th of May 2012
 
 * Fixed a bug where partials called within a route would not have layout set to false by default. To be honest, I think it's a change in the Sinatra codebase, but it was easily fixed by setting layout to false with the partial method. This does, however, mean that partial can't be called to run a layout, but if you're using it that way then you're using it wrong! Try just calling `haml` or `erb`.
 * Improved the examples by adding a config.rb and config.ru. Not only does it mean the examples can be run from the command line easier, but I think it's a good way to set up an app to help with testing.
+
+----
+
 
 ## v0.3.0 ##
 
@@ -16,6 +26,8 @@
 * More documentation.
 * Better organised development (at last!)
 * A Rake file has arrived!
+
+----
 
 
 ## v0.2.1 ##
@@ -30,12 +42,16 @@ Sam Elliott provided a lot of helpful code to add in features that were lost fro
 * Examples have been added to the examples directory 
 * The code docs are much more extensive.
 
+----
+
 
 ## v0.1.1 ##
 
 9th of December 2011
 
 * Improved the examples in the Readme file. A lot.
+
+----
 
 
 ## v0.1.0 ##
