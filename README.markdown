@@ -86,6 +86,7 @@ or use yard/rdoc to generate them.
     %p
       Is it worse to be at the bottom or the foot?
 
+
 #### Local variables ####
 
     get "/" do
@@ -184,6 +185,7 @@ Look in the examples directory for some very simple examples.
 ### Thanks ###
 
 Thanks to Chris Schneider and Sam Elliott for sharing their code, and for sharing further updates.
+
 
 ### Contributing ###
 
