@@ -26,6 +26,18 @@ So here it is, partials, and that's it.
 
     gem install sinatra-partial
 
+### Getting started ###
+
+At the top of your app.rb:
+
+    require 'sinatra/partial'
+
+For a classic app, that's all you need to do. For a modular app you should register it too:
+
+    class Blah < Sinatra::Base
+      register Sinatra::Partial
+
+
 ### Configuration options ###
 
 The default templating engine is haml. If you wish to use something else, you can set in the config options:
@@ -41,17 +53,6 @@ If you like the Rails convention of adding an underscore to the beginning of a p
     enable :partial_underscores
 
 Otherwise, the default is for no underscore (if you like Rails you know where to get it;)
-
-### Getting started ###
-
-At the top of your app.rb:
-
-    require 'sinatra/partial'
-
-For a classic app, that's all you need to do. For a modular app you should register it too:
-
-    class Blah < Sinatra::Base
-      register Sinatra::Partial
 
 
 ### Some examples ###
@@ -85,6 +86,7 @@ or use yard/rdoc to generate them.
     %p
       Is it worse to be at the bottom or the foot?
 
+
 #### Local variables ####
 
     get "/" do
@@ -112,10 +114,10 @@ Remember that since this is a helper method it can be called inside routes and v
       Welcome back #{username}
       
     -# content.haml
-      Blah Blah Blah
+    Blah Blah Blah
       
     -# footer.haml
-      You've reached the bottom of the page!
+    You've reached the bottom of the page!
     
     -# layout.haml
     %html
@@ -184,6 +186,7 @@ Look in the examples directory for some very simple examples.
 
 Thanks to Chris Schneider and Sam Elliott for sharing their code, and for sharing further updates.
 
+
 ### Contributing ###
 
 Most of all, remember that **any** contribution you can make will be valuable, whether that is putting in a ticket for a feature request (or a bug, but they don't happen here;), cleaning up some grammar, writing some documentation (or even a blog post, let me know!) or a full blooded piece of code - it's **all** welcome and encouraged.
@@ -200,9 +203,9 @@ To contribute some code:
     - `git checkout -b kitchen_sink`
 * Install Bundler.
     - `gem install bundler -r --no-ri --no-rdoc`
-    - Any further updates needed, just run `bundle install`, it'll remember the rest.
 * Install gems from Gemfile.
     - `bundle install --binstubs --path vendor`
+    - Any further updates needed, just run `bundle install`, it'll remember the rest.
 * Write some specs.
 * Write some code. (Yes, I believe that is the correct order, and you'll never find me doing any different;)
 * Write some documentation using Yard comments - see http://rubydoc.info/docs/yard/file/docs/GettingStarted.md
