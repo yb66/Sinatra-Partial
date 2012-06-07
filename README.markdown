@@ -26,6 +26,18 @@ So here it is, partials, and that's it.
 
     gem install sinatra-partial
 
+### Getting started ###
+
+At the top of your app.rb:
+
+    require 'sinatra/partial'
+
+For a classic app, that's all you need to do. For a modular app you should register it too:
+
+    class Blah < Sinatra::Base
+      register Sinatra::Partial
+
+
 ### Configuration options ###
 
 The default templating engine is haml. If you wish to use something else, you can set in the config options:
@@ -41,17 +53,6 @@ If you like the Rails convention of adding an underscore to the beginning of a p
     enable :partial_underscores
 
 Otherwise, the default is for no underscore (if you like Rails you know where to get it;)
-
-### Getting started ###
-
-At the top of your app.rb:
-
-    require 'sinatra/partial'
-
-For a classic app, that's all you need to do. For a modular app you should register it too:
-
-    class Blah < Sinatra::Base
-      register Sinatra::Partial
 
 
 ### Some examples ###
