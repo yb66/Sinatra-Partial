@@ -8,8 +8,10 @@ module AppWithUnderscoresAndErb
   class App < Sinatra::Base
     register Sinatra::Partial
     use WhiteSpaceRemove
-  
-    News = ["This", "is", "all", "new"]
+    
+    configure do 
+      set :news, ["This", "is", "all", "new"]
+    end
     
     enable :partial_underscores
     set :partial_template_engine, :erb
