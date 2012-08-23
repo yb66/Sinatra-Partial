@@ -4,5 +4,13 @@ rvm:
   - 1.9.2
   - 1.9.3
   - ruby-head
+  - jruby-19mode
+  - rbx
 bundler_args: --binstubs --path vendor 
 script: bundle exec rspec spec
+
+# whitelist
+branches:
+  only:
+    - master
+    - develop

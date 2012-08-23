@@ -9,7 +9,9 @@ module AppNoUnderscores
     register Sinatra::Partial
     use WhiteSpaceRemove
     
-    News = ["This", "is", "all", "new"]
+    configure do 
+      set :news, ["This", "is", "all", "new"]
+    end
     
     
     get "/" do  
