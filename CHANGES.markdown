@@ -1,3 +1,11 @@
+## v0.3.2 ##
+
+23rd of August 2012
+
+* Updated the examples to use a setting instead of a constant (because JRuby didn't like it, and because it is a bit weird).
+* Ran specs against Rubinius and JRuby(1.9 API) and they passed, so they've been added to the Travis CI as well.
+* Updated the README to make the build status a bit clearer.
+
 7th of June 2012
 
 * Fixes to README.
