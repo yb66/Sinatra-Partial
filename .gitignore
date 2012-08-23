@@ -16,3 +16,4 @@ vendor/
 bin/
 docs/
 coverage/
+.rbx/
