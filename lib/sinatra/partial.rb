@@ -14,9 +14,10 @@ module Sinatra
       # param [true,false,nil] underscores Defaults to false
       def self.partial_expand_path(partial_path, underscores=false)
         underscores ||= false
-        dirs, base = [File.dirname(partial_path),File.basename(partial_path)]
+        dirs, base = File.dirname(partial_path), File.basename(partial_path) 
         base.insert(0, "_") if underscores
-        File.join(dirs, base).to_sym
+        xs = dirs == "." ? [base] : [dirs, base]
+        File.join(xs).to_sym
       end
       
       # This takes the name of the local from the template's name, and corrects local by removing leading underscore if it's there.
@@ -71,6 +72,8 @@ module Sinatra
             buffer << self.method(engine).call(template, options.merge(:locals => new_locals))
           end.join("\n")
         else
+          # TODO benchmark this and see if caching the method
+          # speeds things up
           self.method(engine).call(template, options)
         end
       end
