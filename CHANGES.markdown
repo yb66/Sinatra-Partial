@@ -1,3 +1,9 @@
+## next release ##
+
+* Fixed example in README, re issue#4, thanks to @mollaza for pointing it out.
+* better handling of paths, which helps fix a (hopefully rare) error when a dot is in the path.
+
+
 ## v0.3.0 ##
 
 23rd of April 2012 
