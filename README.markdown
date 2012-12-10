@@ -163,8 +163,11 @@ Here's how to use a collection, in this case to render a menu:
         = partial :menu_item, collection: menu
       
     -# menu_item.haml
+    - display_name, url = menu_item
     - atts ||= {}
-    - atts[:active] = {class: "active" } if request.url == menu_item.last
+    -# set the class of the  list item for the current page to 'active'
+    - (atts[:class] = atts[:class].nil? ? "active" : "#{atts[:class]} active") if request.url == url
+    
     %li{ atts }
       %a{ class: "nav", href: menu_item.last }
         = menu_item.first
