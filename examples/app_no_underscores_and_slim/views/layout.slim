@@ -1,0 +1,11 @@
+html
+  head
+  body
+    == partial :meta
+    
+    ul
+      == partial :news, :collection => settings.news, :locals => {:klass => {:class => "klassic"}}, :disable_escape => true
+      
+    == partial :locality, :locals => Hash[%w{a b c d}.zip(%w{A B C D})]
+    
+    == yield
