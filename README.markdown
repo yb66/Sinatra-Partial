@@ -60,6 +60,9 @@ If you like the Rails convention of adding an underscore to the beginning of a p
 
 Otherwise, the default is for no underscore (if you like Rails you know where to get it;)
 
+*Note:*  
+
+If you're using [Slim](https://rubygems.org/gems/slim) then there are examples in the examples directory, but the output is slightly different for some reason and [the project maintainers don't wish to be helpful](https://github.com/stonean/slim/issues/328). I don't use Slim, if you do then feel free to contribute and find out how to get the specs to pass, but I won't be pursuing this.
 
 ### Some examples ###
 

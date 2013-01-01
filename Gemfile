@@ -17,4 +17,5 @@ group :test do
   gem "sinatra"
   gem "haml"
   gem 'timecop'
+  gem "slim"
 end
