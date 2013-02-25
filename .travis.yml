@@ -7,8 +7,6 @@ rvm:
   - ruby-head
   - jruby-19mode
   - rbx-19mode
-bundler_args: --binstubs --path vendor 
-script: bundle exec rspec spec
 
 # whitelist
 branches:
