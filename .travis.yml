@@ -3,9 +3,10 @@ rvm:
   - 1.8.7
   - 1.9.2
   - 1.9.3
+  - 2.0.0
   - ruby-head
   - jruby-19mode
-  - rbx
+  - rbx-19mode
 bundler_args: --binstubs --path vendor 
 script: bundle exec rspec spec
 
