@@ -1,10 +1,9 @@
-## v0.4.1 ##
+## Upcoming ##
 
-15th of April 2013
-
-* Added a requirement for `date` in the `spec-helper to stop the Travis builds failing for 1.8.7 and 1.9.2 by [@petems](https://github.com/petems)
+* Fix for some errors on 1.8.7 and 1.9.2 builds when run on Travis. Thanks to [@petems](https://github.com/petems).
 
 ----
+
 
 ## v0.4.0 ##
 

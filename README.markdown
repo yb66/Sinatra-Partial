@@ -229,7 +229,7 @@ To contribute some code:
   - If your commit changes the way things work or adds a feature then add an example in the examples dir. The specs run off the examples to make sure the library works with a real project while keeping the examples up to date, so make sure you add something there if needs be.
 * Run `bin/rake docs` to generate documentation.
     - Open up docs/index.html and check your documentation has been added and is clear.
-* Add a short summary of your changes to the CHANGES file. Add your name and a link to your bio/website if you like too.
+* Add a short summary of your changes to the top of CHANGES file. Add your name and a link to your bio/website if you like too. **Don't** add a version number, I'll handle that.
 * Send me a pull request.
     - Don't merge into the develop branch!
     - Don't merge into the master branch!
