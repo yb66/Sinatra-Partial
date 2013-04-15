@@ -39,5 +39,6 @@ RSpec.configure do |config|
 end
 
 # freeze time!
+require 'date'
 require 'timecop'
 Timecop.freeze( Date.today  )
