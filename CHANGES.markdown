@@ -1,3 +1,7 @@
+## Upcoming ##
+
+*  Fix for some errors on 1.8.7 and 1.9.2 builds when run on Travis. Thanks to [@petems](https://github.com/petems)."
+
 ## v0.4.0 ##
 
 10th of December 2012

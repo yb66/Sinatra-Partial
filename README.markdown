@@ -12,7 +12,7 @@ Develop branch:
 
 ### Quick note ###
 
-If you do decide to use this gem, please let me know if it isn't working for you - make a contribution! Github makes it so simple..! See the Contribution section for more.
+If you do decide to use this gem, please let me know if it isn't working for you - make a contribution! Github makes it so simple..! See the [Contribution section](#Contributing) for more.
 
 Back to our previously scheduled programming...
 
@@ -226,9 +226,10 @@ To contribute some code:
 * Run `reek PATH_TO_FILE_WITH_YOUR_CHANGES` and see if it gives you any good advice. You don't have to do what it says, just consider it.
 * Run specs to make sure you've not broken anything. If it doesn't pass all the specs it doesn't get in.
   - Have a look at coverage/index.htm and see if all your code was checked. We're trying for 100% code coverage.
+  - If your commit changes the way things work or adds a feature then add an example in the examples dir. The specs run off the examples to make sure the library works with a real project while keeping the examples up to date, so make sure you add something there if needs be.
 * Run `bin/rake docs` to generate documentation.
     - Open up docs/index.html and check your documentation has been added and is clear.
-* Add a short summary of your changes to the CHANGES file. Add your name and a link to your bio/website if you like too.
+* Add a short summary of your changes to the top of CHANGES file. Add your name and a link to your bio/website if you like too. **Don't** add a version number, I'll handle that.
 * Send me a pull request.
     - Don't merge into the develop branch!
     - Don't merge into the master branch!
