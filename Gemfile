@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gemspec
+
 group :development do
   gem "rake"
   gem "wirble"
@@ -14,7 +16,6 @@ group :test do
   gem "rack-test"
   gem "rspec"
   gem "simplecov"
-  gem "sinatra"
   gem "haml"
   gem 'timecop'
   gem "slim"
