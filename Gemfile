@@ -2,8 +2,9 @@ source "https://rubygems.org"
 
 gemspec
 
+gem "rake"
+
 group :development do
-  gem "rake"
   unless RUBY_ENGINE == 'jruby' || RUBY_ENGINE == "rbx"
     gem "pry-byebug"
   end
@@ -14,7 +15,6 @@ group :development do
 end
 
 group :test do
-  gem "rake"
   gem "rack-test"
   gem "rspec"
   gem "simplecov"
