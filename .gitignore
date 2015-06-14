@@ -12,6 +12,7 @@ app/.sass-cache/
 .bundle/
 Gemfile.lock
 vendor/
+vendor.noindex/
 .yardoc/
 bin/
 docs/
