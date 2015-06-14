@@ -17,6 +17,7 @@ end
 group :test do
   gem "rack-test"
   gem "rspec"
+  gem "rspec-its"
   gem "simplecov"
   gem "haml"
   gem 'timecop'
