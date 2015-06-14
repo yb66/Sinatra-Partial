@@ -3,13 +3,10 @@ rvm:
   - 2.0.0
   - 2.1.0
   - 2.2.2
-  - jruby-18mode # JRuby in 1.8 mode
   - jruby-19mode # JRuby in 1.9 mode
-  - rbx-2.1.1
+  - rbx
   - ruby-head
   - jruby-head
-  - rbx-2.5.3 # Amazon latest
-  - rbx-2.2.6 # OSX latest, Debian latest should work for Ubuntu too
 
 # whitelist
 branches:
@@ -21,3 +18,4 @@ matrix:
   allow_failures:
     - rvm: jruby-head
     - rvm: ruby-head
+    - rvm: rbx
