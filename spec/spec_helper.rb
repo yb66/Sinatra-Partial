@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
 require 'rspec'
+require 'rspec/its'
 Spec_dir = File.expand_path( File.dirname __FILE__ )
 unless Kernel.respond_to?(:require_relative)
   module Kernel
