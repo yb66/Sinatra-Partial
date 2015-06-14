@@ -4,7 +4,9 @@ gemspec
 
 group :development do
   gem "rake"
-  gem "wirble"
+  unless RUBY_ENGINE == 'jruby' || RUBY_ENGINE == "rbx"
+    gem "pry-byebug"
+  end
   gem "reek"
   gem "maruku"
   gem "yard"
