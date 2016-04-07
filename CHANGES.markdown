@@ -1,6 +1,14 @@
 ## Upcoming ##
 
-*  Fix for some errors on 1.8.7 and 1.9.2 builds when run on Travis. Thanks to [@petems](https://github.com/petems)."
+## v1.0.0, 7th of April 2015 ##
+
+* Dropped support for pre-v2 Ruby. There's no changes within the library itself that should stop it working at this point, but that doesn't mean that it's supported.
+* Changes because of updates to other libs. By that, I mean the ever changing RSpec API.
+* Release because of http://blog.rubygems.org/2016/04/06/gem-replacement-vulnerability-and-mitigation.html
+* Move to 1.0.0 for semver, this gem has been stable for a long time.
+
+----
+
 
 ## v0.4.0 ##
 
@@ -8,6 +16,7 @@
 
 * Fixed example in README, re issue#4, thanks to [@moollaza](https://github.com/moollaza) for pointing it out.
 * better handling of paths, which helps fix a (hopefully rare) error when a dot is in the path.
+*  Fix for some errors on 1.8.7 and 1.9.2 builds when run on Travis. Thanks to [@petems](https://github.com/petems)."
 
 ----
 
