@@ -8,11 +8,12 @@ group :development do
   unless RUBY_ENGINE == 'jruby' || RUBY_ENGINE == "rbx"
     gem "pry-byebug"
   end
-  gem "reek"
   gem "maruku"
   gem "yard"
   gem "travis-lint"
 end
+
+gem "sinatra", ">=2.0.0"
 
 group :test do
   gem "rack-test"

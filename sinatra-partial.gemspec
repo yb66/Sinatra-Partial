@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.description = %q{Just the partials helper in a gem. That is all.}
   s.license     = 'MIT'
 
-  s.add_dependency 'sinatra', "~>1.4"
+  s.add_dependency 'sinatra', ">=1.4"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
