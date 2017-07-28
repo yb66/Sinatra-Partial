@@ -1,5 +1,9 @@
 ## Upcoming ##
 
+## v1.0.1, 28th of July 2017 ##
+
+- Sinatra is at v2.0.0 so checked it works against it and updated the gemspec to allow it to install when using a dependency manager like Bundler.
+
 ## v1.0.0, 7th of April 2015 ##
 
 * Dropped support for pre-v2 Ruby. There's no changes within the library itself that should stop it working at this point, but that doesn't mean that it's supported.
