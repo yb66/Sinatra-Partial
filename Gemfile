@@ -13,6 +13,8 @@ group :development do
   gem "travis-lint"
 end
 
+gem "sinatra", ">=2.0.0"
+
 group :test do
   gem "rack-test"
   gem "rspec"
